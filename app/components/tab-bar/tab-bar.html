@@ -1,0 +1,10 @@
+<div class="container-fluid">
+  <ul class="nav nav-tabs nav-justified">
+    <li ng-repeat="tab in tabs">
+      <a id="{{tab.class}}" ng-class="{active: $activeRoute}" ng-href="{{tab.route}}" active-route>
+        <span class="nav-tab-icon fa" ng-class="tab.icon"></span>
+        <span class="nav-tab-label">{{tab.name}}</span>
+      </a>
+    </li>
+  </ul>
+</div>
