@@ -1,14 +1,14 @@
 define({
  
   storage: {
-    feeds: 'currently_feeds',
-    subFeed: 'currently.subFeed',
-    newsFeed: 'currently.newsFeed',
+    series: 'currently.series',
+    shows: 'currently.series',
+    newSubs: 'currently.newSubs',
     settings: 'currently.settings',
     notifications: 'currently.notifications',
     maxItems: 1000
   },
-  feedViewLimit: 100,
+  showLimit: 100,
   alarms: {
     update: {
       name: 'update',

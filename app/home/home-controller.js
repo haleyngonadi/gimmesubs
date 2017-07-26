@@ -7,37 +7,37 @@ define(function () {
     };
 
     $scope.offset = 0;
-    $scope.welcomeModal;
-    $settings.getFeedsFromExtension();
+    // $scope.welcomeModal;
+    // $settings.getFeedsFromExtension();
   
 
-    $q.all(services).then(function (services) {
-      var closeModal = function ($event) {
-        $settings.addSetting({ showWelcomeModal: false });
+    // $q.all(services).then(function (services) {
+    //   var closeModal = function ($event) {
+    //     $settings.addSetting({ showWelcomeModal: false });
 
-        return $scope.welcomeModal.hide();
-      };
+    //     return $scope.welcomeModal.hide();
+    //   };
 
-      var followLink = function ($event) {
-        $event.preventDefault();
+    //   var followLink = function ($event) {
+    //     $event.preventDefault();
 
-        closeModal().then(function () {
-          $location.url(angular.element($event.srcElement).attr('href'));
-        });
-      };
+    //     closeModal().then(function () {
+    //       $location.url(angular.element($event.srcElement).attr('href'));
+    //     });
+    //   };
 
-      if (services.settings.showWelcomeModal) {
-        $scope.welcomeModal = $modal({
-          templateUrl: 'app/home/welcome-modal.html'
-        });
+    //   if (services.settings.showWelcomeModal) {
+    //     $scope.welcomeModal = $modal({
+    //       templateUrl: 'app/home/welcome-modal.html'
+    //     });
 
-        $scope.welcomeModal.show({
-          name: partnerConfig.name,
-          closeModal: closeModal,
-          followLink: followLink
-        });
-      }
-    });
+    //     $scope.welcomeModal.show({
+    //       name: partnerConfig.name,
+    //       closeModal: closeModal,
+    //       followLink: followLink
+    //     });
+    //   }
+    // });
   };
 
   return [

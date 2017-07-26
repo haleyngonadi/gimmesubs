@@ -37,7 +37,7 @@ define([
         modal = $compile('<modal>' + html + '</modal>')($scope);
         container.append(modal);
 
-        $animate.addClass(modal, 'modal-up');
+        $animate.addClass(modal, 'animated pulse');
       };
 
       var show = function (localScope) {
@@ -50,9 +50,10 @@ define([
         var deferred = $q.defer();
 
         if (modal) {
-          $animate.removeClass(modal, 'modal-up').then(function () {
+          $animate.removeClass(modal, 'animated pulse').then(function () {
             $scope.$destroy();
             modal = null;
+            modal.remove();
             deferred.resolve();
           });
         } else {

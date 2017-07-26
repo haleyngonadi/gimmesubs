@@ -28,14 +28,14 @@
 <div class="feed-item-list" ng-class="{'with-navbar': (feed | with:filterBy).length}">
   <article class="feed-item" ng-class="{read: item.read}" dir-paginate="item in feed |  filter:search | with:filterBy | itemsPerPage:10 track by $index">
     <header class="feed-item-header">
-      <h2 class="feed-item-title"><a ng-href="{{item.link}}" ng-click="openLink(item, 'title')">{{item.title | trim}}</a></h2>
+      <h2 class="feed-item-title"><a ng-href="{{item.link}}" ng-click="openLink(item, 'title')">{{item.title}}</a></h2>
     </header>
 
     <a ng-href="{{item.link}}" ng-click="openLink(item, 'image')">
       <div class="feed-item-inline-media" ng-show="item.inlineMedia && settings.inlineImages" ng-style="{backgroundImage: 'url(' + item.inlineMedia + ')'}"></div>
     </a>
 
-    <p class="feed-item-snippet" ng-show="settings.articleSnippets">{{item.contentSnippet | trim}}</p> 
+    <p class="feed-item-snippet" ng-show="settings.articleSnippets">{{item.contentSnippet}}</p> 
 
     <footer class="clearfix">
       <span class="feed-item-date pull-left" am-time-ago="item.published['$t']"></span>
