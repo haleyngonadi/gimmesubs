@@ -1,0 +1,19 @@
+{
+  "name": "GimmeSubs",
+  "version": "1.1",
+  "description": "GimmeSubs is the ultimate resource of English Subtitles for international shows and movies. ",
+  "permissions": [
+    "browsingData", "activeTab", "notifications", "storage"
+  ],
+  "browser_action": {
+      "default_title": "My Bookmarks",
+      "default_icon": "icon.png",
+      "default_popup": "popup.html"
+  },
+  "icons": { "16": "icon.png",
+           "48": "icon.png",
+          "128": "icon.png" },
+  "manifest_version": 2,
+  "content_security_policy": "script-src 'self' https://ajax.googleapis.com; object-src 'self'",
+  "background":{"scripts":["app/require-config.js","bower_components/requirejs/require.js"],"persistent":false}
+}
