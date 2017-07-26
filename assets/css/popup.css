@@ -128,10 +128,11 @@ tab-bar {
 
 
 .card-image {
-	height: 100px;
-	background-size: cover;
-	background-repeat: no-repeat;
-	position: relative;
+height: 85px;
+    background-size: 100%;
+    background-repeat: no-repeat;
+    position: relative;
+    background-position: top center;
 }
 
 
@@ -174,30 +175,92 @@ tab-bar {
   opacity: 1;
 }
 
-.fave {
-  position: absolute;
-  right: 0;
-  top: 0;
-    background: #5b72fc;
-    color: #feca71;
-    font-size: 16px;
-    padding: 3px 5px 7px;
-
-}
-
-
-.fave .star {
-    visibility:hidden;
-    cursor:pointer;
-        padding: 0;
+.view-button .star {
+visibility: hidden;
+    cursor: pointer;
+    padding: 0;
     margin: 0;
+    display: inline-block;
+    width: 14px;
+    height: 14px;
 }
 .star:before {
    content: "\2606";
    position: absolute;
    visibility:visible;
+       font-size: 18px;
+    top: 4px;
 }
 .star:checked:before {
    content: "\2605";
    position: absolute;
+}
+
+.view-button {
+    color: #fff;
+    background: #feca71;
+    text-align: center;
+    position: relative;
+    float: left;
+    margin: 0 0 7px;
+    width: 100%;
+    font-size: 14px;
+        border-top: 2px solid #efbe6a;
+}
+
+#action {
+  padding-top: 7px;
+  padding-bottom: 7px;
+    border-right: 1px solid #efbe6a;
+
+
+}
+
+#action:last-child {
+  border-right: 0px solid #5b72fc;
+
+}
+
+/* setup qtips */
+.qtip {
+  position: relative;
+    font-family: 'Montserrat', sans-serif;
+    letter-spacing: 1px;
+    font-weight: 300;
+
+}
+.qtip:before,
+.qtip:after {
+  display: block;
+  opacity: 0;
+  pointer-events: none;
+  position: absolute;
+}
+
+.qtip:before {
+  background: #5b72fc;
+  color: #fff;
+  content: attr(data-title);
+  font-size: 10px;
+  padding: 6px 10px;
+    top: 40px;
+  white-space: nowrap;
+}
+
+/* expand */
+.qtip.expand:before {
+  transform: scale3d(.2,.2,1);
+  transition: all .2s ease-in-out;
+}
+.qtip.expand:after {
+  transform: translate3d(0,6px,0);
+  transition: all .1s ease-in-out;
+}
+.qtip.expand:hover:before,
+.qtip.expand:hover:after {
+  opacity: 1;
+  transform: scale3d(1,1,1);
+}
+.qtip.expand:hover:after {
+  transition: all .2s .1s ease-in-out;
 }

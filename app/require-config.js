@@ -9,6 +9,9 @@ var require = {
     'lodash': '../bower_components/lodash/lodash',
     'moment': '../bower_components/moment/moment',
     'dirPagination': '../bower_components/dirPagination',
+    // 'qTip': '../assets/js/jquery.qtip.min',
+    // 'jquery': '../bower_components/jquery/jquery.min',
+
 
   },
 
@@ -21,6 +24,7 @@ var require = {
     'angular-animate': ['angular'],
     'angular-moment': ['angular', 'moment'],
     'dirPagination': ['angular']
+    // 'qTip': ['jquery']
 
   },
 

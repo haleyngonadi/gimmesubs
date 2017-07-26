@@ -1,6 +1,6 @@
 {
   "shows": [
-{"name": "Tierra De Reyes","url": "http://www.spoilertv.com/feeds/posts/default/-/SpoilerTV%20Article?alt=json","default": false, "image": "assets/images/tierra.jpg"},
+{"name": "Tierra De Reyes","url": "http://www.spoilertv.com/feeds/posts/default/-/SpoilerTV%20Article?alt=json","default": false, "image": "assets/images/tierra.jpg", "description": "What is a continental breakfast and what other types of breakfasts are there?"},
  {"name": "La Doña","url": "http://www.spoilertv.com/feeds/posts/default/-/SpoilerTV%20Article?alt=json","default": false, "image": "assets/images/ladona.jpg"},
  {"name": "El Senor de la Celos","url": "http://www.spoilertv.com/feeds/posts/default/-/SpoilerTV%20Article?alt=json","default": false, "image": "assets/images/senor.jpg"}
  ]

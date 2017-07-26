@@ -4,16 +4,22 @@
  <div class="col-xs-4 series-image" ng-repeat="show in shows track by $index">
 
 <div class="card">
-<div class="card-image" style="background-image: url({{show.image}})">
-	<!--span class="fave unfaved"><i class="fa fa-star"></i></span-->
 
-  <div class="fave"><input ng-model="show.subscribed" ng-change="updateSubscriptions()" class="star" type="checkbox" title="add show to favorites"></div>
+<div class="card-image" style="background-image: url({{show.image}})"></div>
 
-</div>
+ <div class="view-button">
+                         <div class="col-xs-4 qtip expand" id="action" data-title="Add show to favorites">
+                         <input ng-model="show.subscribed" ng-change="updateSubscriptions()" class="star" type="checkbox"></div>
+                        <div ng-click="viewShow()" class="col-xs-4" id="action"><i class="fa fa-list" aria-hidden="true"></i></div>
+                        <div ng-click="shareShow()" class="col-xs-4" id="action"><i class="fa fa-share-alt" aria-hidden="true"></i></div>
 
-<div class="card-content">
-                         <span class="card-title" ng-click="viewShow()">{{show.name}}</span>
+
                     </div>
+                <div class="card-content">
+                         <span class="card-title">{{show.name}}</span>
+                    </div>
+
+                   
 
  </div></div>
 

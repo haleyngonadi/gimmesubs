@@ -23,7 +23,8 @@ define([
   'series/series',
   'reading-list/reading-list',
   'favourites/favourites',
-  'settings/settings'
+  'settings/settings',
+
 ], function (angular) {
   'use strict';
 
