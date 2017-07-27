@@ -425,21 +425,26 @@ md-backdrop.md-dialog-backdrop {
 }
 
 .md-dialog-container {
- /* max-height: 391px;*/
+     max-height: 433px;
      z-index: 1032;
 }
-.md-dialog-is-showing {
-    max-height: 600px;
+
+md-dialog {
+  max-width: 60%;
+      max-height: 60%;
 }
 
 .scroll-container {
-  margin-top: 142px;
-  margin-bottom: 44px;
-  height: 512px;
-  overflow: auto;
+  margin-top: 100px;
+      overflow: hidden;
+      height: 391px;
 }
 .page-container {
-  min-height: 100%;
+        position: fixed;
+    top: 142px;
+    height: 391px;
+    overflow-y: scroll;
+    width: 100%;
 }
 
 .inner {

@@ -18,6 +18,13 @@ define([
     showWelcomeModal: true
   };
 
+  var captionSettings = {
+    backgroundColor: 'rgba(0,0,0,0.3)',
+    textColor: '#FFF',
+    textFont: 'Arial'
+
+  }
+
 
   var SettingsService = function ($q, $http, $window, config) {
     var that = this;
@@ -235,6 +242,14 @@ if (that.setFeeds(newFeeds) == null){
         that.addSetting(angular.extend(settings, defaultSettings));
       }
     });
+
+      this.getCaption().then(function (settings) {
+      if (_.isEmpty(settings)) {
+        that.editCaption(angular.extend(settings, captionSettings));
+      }
+    });
+
+
   };
 
   return [

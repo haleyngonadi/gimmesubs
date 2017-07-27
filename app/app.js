@@ -8,7 +8,6 @@ define([
 
     'angular-material',
   //'dirPagination/dirPagination',
-  'components/action-sheet/action-sheet',
   'components/constants/constants',
   'components/feed/feed',
   'components/helpers/helpers',
@@ -38,7 +37,6 @@ define([
     'ngMaterial',
     'angularMoment',
     'app.constants',
-    'currently.actionSheet',
     'currently.feed',
     'currently.helpers',
     'currently.modal',

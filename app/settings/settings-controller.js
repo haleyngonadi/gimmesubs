@@ -1,7 +1,7 @@
 define(function () {
   'use strict';
 
-  var SettingsController = function ($q, $scope, $settings, $actionSheet, $mdDialog) {
+  var SettingsController = function ($q, $scope, $settings, $mdDialog) {
 
      $settings.getFeedsFromExtension();
          var alert;
@@ -36,10 +36,39 @@ define(function () {
       targetEvent: ev,
       clickOutsideToClose:true,
       fullscreen: $scope.customFullscreen,
-      controller: function DialogController($scope, $mdDialog) {
+      controller: function DialogController($scope, $mdDialog, $settings, $filter) {
+
+        var self = this;
+
             $scope.closeDialog = function() {
               $mdDialog.hide();
-            }
+            };
+
+
+
+                $scope.avatarData = [{
+                  'id': 1,
+        title: 'avatar 1',
+        value: '#000'
+      },{
+        'id': 2,
+        title: 'avatar 2',
+        value: '#FF0'
+      },{
+        'id': 3,
+        title: 'avatar 3',
+        value: '#dc1432'
+    }];
+
+    $scope.selectedId = 2;
+        $scope.selectedUser = function() {
+      return $filter('filter')($scope.avatarData, { id: $scope.selectedId })[0].value;
+    };
+
+
+
+
+
           }
     })
     .then(function(answer) {
@@ -58,33 +87,13 @@ define(function () {
       $settings.setFeeds($scope.feeds);
     };
 
-    $scope.bulkEditSubscriptions = function () {
 
-      $actionSheet.show({
-        titleText: 'Select subscribed feeds',
-        buttons: [
-          { text: 'All', selectAll: true },
-          { text: 'None', selectAll: false }
-        ],
-        buttonClicked: function (i) {
-          if (this.buttons[i].selectAll) {
-            $scope.toggleAllSubscriptions(true);
-          } else {
-            $scope.toggleAllSubscriptions(false);
-          }
-
-          return true;
-        },
-        cancelText: 'Cancel'
-      });
-    };
   };
 
   return [
     '$q',
     '$scope',
     '$settings',
-    '$actionSheet',
     '$mdDialog', 
     SettingsController
   ];
