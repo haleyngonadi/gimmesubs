@@ -78,11 +78,11 @@ define([
 
     this.setFeedSubscriptions = function (newFeeds) {
 
-      console.log (newFeeds);
+      //console.log (newFeeds);
       var deferred = $q.defer();
 
       this.getFeeds().then(function (shows) {
-        console.log(newFeeds, shows);
+      //  console.log(newFeeds, shows);
 
         _.forEach(newFeeds, function (newFeed, i, list) {
           var existingFeed = _.find(shows, function (show) {

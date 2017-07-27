@@ -2,6 +2,10 @@ body {
 	background: #fff;
 	padding: 0;
 	margin: 0;
+    font-family: 'Montserrat', sans-serif;
+  font-weight: 300;
+    font-size: 12px;
+    overflow: hidden;
 
 }
 
@@ -28,31 +32,41 @@ img {
 }
 
 header {
-	width: 100%;
-	padding: 10px;
-	background: #5b72fc;
-	color: white;
-	text-align: center;
-	font-family: 'Montserrat', sans-serif;
-	font-size: 16px;
-	font-weight: 600;
-	text-transform: uppercase;
-	letter-spacing: 1px;
-	position: fixed;
-			margin-top: 100px;
-			    z-index: 999999;
+    width: 100%;
+    padding: 10px;
+    background: #5b72fc;
+    color: white;
+    text-align: center;
+    font-family: 'Montserrat', sans-serif;
+    font-size: 16px;
+    font-weight: 600;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    position: fixed;
+    top: 100px;
+    z-index: 1;
+    margin-left: -18px;
+        margin-right: -18px;
 
 
 }
 
 .wrapper {
-   height: 567px;
-    margin-top: 142px;
+      position: relative;
+    height: 567px;
+    top: 142px;
     padding: 18px;
     width: 100%;
     overflow: scroll;
     background: white;
+    left: 0;
 }
+
+.nav a {
+    font-weight: 400;
+    font-size: 14px;
+}
+bootstrap.min.css:5
 
 
 .navBardemoBasicUsage md-content .ext-content {
@@ -64,7 +78,7 @@ header {
     float: none;
     display: table-cell;
     width: 1%;
-        border-left: 1px solid rgba(255,255,255,0.15);
+        border-left: 1px solid rgba(0,0,0,0.05);
         transition: 0.3s;
 }
 
@@ -128,7 +142,7 @@ tab-bar {
 
 
 .card-image {
-height: 85px;
+height: 79px;
     background-size: 100%;
     background-repeat: no-repeat;
     position: relative;
@@ -139,18 +153,18 @@ height: 85px;
 
 
 .modal {
-  padding: 15px;
+  padding-top: 50px;
   width: 100%;
   min-height: 100%;
   background-color: #fff;
   -webkit-transform: translate3d(0, 100%, 0);
   transform: translate3d(0, 100%, 0);
   transition: all 0.5s ease-in-out;
-  position: absolute;
+  position: fixed;
   top: 0;
   z-index: 1050;
   display: block;
-  top: 142px;
+  top: 100px;
 }
 .modal-up {
   -webkit-transform: translate3d(0, 0, 0);
@@ -185,14 +199,14 @@ visibility: hidden;
     height: 14px;
 }
 .star:before {
-   content: "\2606";
+  font-family: FontAwesome;
+   content: "\f08a";
    position: absolute;
    visibility:visible;
-       font-size: 18px;
-    top: 4px;
 }
 .star:checked:before {
-   content: "\2605";
+
+   content: "\f004";
    position: absolute;
 }
 
@@ -202,7 +216,7 @@ visibility: hidden;
     text-align: center;
     position: relative;
     float: left;
-    margin: 0 0 7px;
+    margin: 0 0 9px;
     width: 100%;
     font-size: 14px;
         border-top: 2px solid #efbe6a;
@@ -221,12 +235,16 @@ visibility: hidden;
 
 }
 
+span.qtip {
+  cursor: pointer;
+}
 /* setup qtips */
 .qtip {
   position: relative;
     font-family: 'Montserrat', sans-serif;
     letter-spacing: 1px;
     font-weight: 300;
+
 
 }
 .qtip:before,
@@ -263,4 +281,114 @@ visibility: hidden;
 }
 .qtip.expand:hover:after {
   transition: all .2s .1s ease-in-out;
+}
+.somebutton{
+  color: white !important;
+  cursor: pointer;
+}
+
+.card-inner {
+  padding: 30px;
+  margin-bottom: 10px;
+}
+
+
+
+table.episodes {
+    border-collapse: collapse;
+    width: 100%;
+
+}
+
+.episodes b {
+  color: #5b72fc;
+  margin-right: 10px;
+
+}
+
+.episodes td, .episodes th {
+    text-align: left;
+    padding: 10px;
+}
+
+.episodes td {
+  border-bottom: 1px solid #f3f3f3;
+  font-size: 14px;
+  font-weight: 300;
+
+}
+
+/*.episodes tr:nth-child(even) {
+    background-color: #f3f3f3;
+}*/
+
+
+.header {
+      width: 100%;
+    padding: 5px;
+    background: #5b72fc;
+    color: white;
+    text-align: center;
+    font-family: 'Montserrat', sans-serif;
+    font-size: 16px;
+    font-weight: 600;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    z-index: 999999;
+            margin: 22px 0 5px;
+                border-bottom: 4px solid #5368e8;
+
+
+}
+
+.fullimage {
+  padding-left: 0;
+}
+
+h3.name {
+  color: #5b72fc;
+  margin: 0 0 5px;
+  font-size: 18px;
+
+}
+
+p.about {
+  font-size: 12px
+}
+
+span.close-button {
+    position: absolute;
+    background: rgba(0,0,0,0.15);
+    padding: 11px 13px;
+    right: 0;
+    top: 0;
+    font-size: 19px;
+    cursor: pointer;
+}
+
+
+
+.modal-header {
+    width: 100%;
+    padding: 10px;
+    background: #5b72fc;
+    color: white;
+    text-align: center;
+    font-family: 'Montserrat', sans-serif;
+    font-size: 16px;
+    font-weight: 600;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    position: fixed;
+    top: 0;
+    z-index: 2;
+    margin-left: 0px;
+        margin-right: -18px;
+
+
+}
+
+.show-inner {
+    overflow-y: scroll;
+    height: 450px;
 }
