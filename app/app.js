@@ -4,6 +4,9 @@ define([
   'angular-sanitize',
   'angular-moment',
     'angular-animate',
+        'angular-aria',
+
+    'angular-material',
   //'dirPagination/dirPagination',
   'components/action-sheet/action-sheet',
   'components/backdrop/backdrop',
@@ -32,6 +35,8 @@ define([
     'ngRoute',
     'ngSanitize',
     'ngAnimate',
+    'ngAria',
+    'ngMaterial',
     'angularMoment',
     'app.constants',
     'currently.actionSheet',

@@ -1,3 +1,7 @@
+html {
+  background: white;
+}
+
 body {
 	background: #fff;
 	padding: 0;
@@ -66,7 +70,6 @@ header {
     font-weight: 400;
     font-size: 14px;
 }
-bootstrap.min.css:5
 
 
 .navBardemoBasicUsage md-content .ext-content {
@@ -337,8 +340,6 @@ table.episodes {
     z-index: 999999;
             margin: 22px 0 5px;
                 border-bottom: 4px solid #5368e8;
-
-
 }
 
 .fullimage {
@@ -392,3 +393,31 @@ span.close-button {
     overflow-y: scroll;
     height: 450px;
 }
+
+
+
+
+.set-header {
+    padding: 5px 0 2px;
+    color: #5b72fc;
+    font-family: 'Montserrat', sans-serif;
+    font-size: 16px;
+    font-weight: 400;
+    letter-spacing: 1px;
+    z-index: 999999;
+    border-bottom: 4px solid #5b72fc;
+}
+
+label {
+  font-weight: 300;
+}
+
+
+ul.options-list li {
+    border-bottom: 1px solid #f3f3f3;
+}
+
+ul.options-list li:last-child {
+    border-bottom: 0px solid #f3f3f3;
+}
+

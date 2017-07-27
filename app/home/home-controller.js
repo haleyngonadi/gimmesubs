@@ -2,9 +2,9 @@ define(function () {
   'use strict';
 
   var HomeController = function ($scope, $q, $settings, $modal, $location, partnerConfig) {
-    var services = {
-      settings: $settings.getSettings()
-    };
+    // var services = {
+    //   settings: $settings.getSettings()
+    // };
 
     $scope.offset = 0;
     // $scope.welcomeModal;

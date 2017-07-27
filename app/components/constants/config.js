@@ -5,6 +5,7 @@ define({
     shows: 'currently.series',
     newSubs: 'currently.newSubs',
     settings: 'currently.settings',
+    caption: 'currently.captions',
     notifications: 'currently.notifications',
     maxItems: 1000
   },

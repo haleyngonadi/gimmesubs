@@ -1,8 +1,19 @@
-<div id="settings" class="page-container alt-bg">
+<div id="settings" class="page-container alt-bg row">
+<header>Settings</header>
   <section class="options-wrapper">
-    <header>Display</header>
+    <div class="set-header">Display</div>
 
     <ul class="list-unstyled options-list">
+
+          <li>
+        <label class="control checkbox">
+          <span type="checkbox" ng-click="changeCaptions()">
+          Subtitle Settings</span>
+        </label>
+      </li>
+
+
+
       <li>
         <label class="control checkbox">
           <input type="checkbox" ng-model="settings.articleSnippets" ng-change="updateSettings()">
@@ -30,7 +41,7 @@
   </section>
 
   <section class="options-wrapper">
-    <header>Notifications</header>
+    <div class="set-header">Notifications</div>
 
     <ul class="list-unstyled options-list">
       <li>
@@ -67,19 +78,5 @@
     </ul>
   </section>
 
-  <section class="options-wrapper">
-    <header>
-     Subscriptions <span class="bulk-edit fa fa-ellipsis-h pull-right" ng-click="bulkEditSubscriptions()"></span>
-    </header>
 
-    <ul class="list-unstyled options-list">
-      <li ng-repeat="feed in feeds track by $index">
-        <label class="control checkbox">
-          <input type="checkbox" ng-model="feed.subscribed" ng-change="updateSubscriptions()">
-          <span class="control-indicator"></span>
-          {{feed.name}}
-        </label>
-      </li>
-    </ul>
-  </section>
 </div>

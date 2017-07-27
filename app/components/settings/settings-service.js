@@ -55,6 +55,39 @@ define([
       return deferred.promise;
     };
 
+
+
+    this.getCaption = function () {
+      var deferred = $q.defer();
+
+      chrome.storage.sync.get(config.storage.caption, function (captions) {
+        deferred.resolve(captions[config.storage.caption] || {});
+      });
+
+      return deferred.promise;
+    };
+
+
+    this.editCaption = function (caption) {
+      var deferred = $q.defer(),
+          captionObj = {};
+
+      this.getCaption().then(function (captions) {
+        var captioned = angular.extend(captions, caption);
+
+        captionObj[config.storage.caption] = captioned;
+
+        chrome.storage.sync.set(captionObj, function () {
+          deferred.resolve();
+        });
+
+
+      });
+
+      return deferred.promise;
+    };
+
+
     this.getFeeds = function () {
       var deferred = $q.defer();
 /*
