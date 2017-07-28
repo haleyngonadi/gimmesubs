@@ -25,7 +25,7 @@
     },
     {
       "matches" : [
-          "http://*.univision.com/novelas/*"
+          "http://*.televisa.com/novelas/*"
       ],
       "js" : ["players/televisa.js"]
     },
@@ -40,6 +40,12 @@
           "http://*.telemundo.com/novelas/*"
       ],
       "js" : ["players/telemundo.js"]
+    },
+    {
+      "matches" : [
+          "https://openload.co/*"
+      ],
+      "js" : ["players/openload.js"]
     }
       
 
