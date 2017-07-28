@@ -4,7 +4,6 @@ define(function () {
   var SettingsController = function ($q, $scope, $settings, $mdDialog) {
 
      $settings.getFeedsFromExtension();
-         var alert;
 
 
     var services = {
@@ -47,24 +46,117 @@ define(function () {
 
 
                 $scope.avatarData = [{
-                  'id': 1,
-        title: 'avatar 1',
-        value: '#000'
+                  id: 1,
+        title: 'Black',
+        value: '#000',
+        class: 'radio-black'
       },{
-        'id': 2,
-        title: 'avatar 2',
-        value: '#FF0'
-      },{
-        'id': 3,
-        title: 'avatar 3',
-        value: '#dc1432'
-    }];
+        id: 2,
+        title: 'Blue',
+        value: '#2892D7',
+        class: 'radio-blue'
 
-    $scope.selectedId = 2;
-        $scope.selectedUser = function() {
-      return $filter('filter')($scope.avatarData, { id: $scope.selectedId })[0].value;
+      },{
+        id: 3,
+        title: 'Red',
+        value: '#DA2C38',
+        class: 'radio-red'
+
+    },
+
+    {
+        id: 4,
+        title: 'Yellow',
+        value: '#E6AF2E',
+        class: 'radio-yellow'
+
+    },
+
+
+    {
+        id: 5,
+        title: 'Green',
+        value: '#9AE19D',
+        class: 'radio-green'
+
+    }
+
+
+
+    ];
+
+
+
+                $scope.colorData = [
+
+    {
+                id: 1,
+        title: 'White',
+        value: '#fff',
+        class: 'radio-white'
+      },
+
+
+
+                {
+
+
+                  id: 1,
+        title: 'Black',
+        value: '#000',
+        class: 'radio-black'
+      },{
+        id: 2,
+        title: 'Blue',
+        value: '#2892D7',
+        class: 'radio-blue'
+
+      },{
+        id: 3,
+        title: 'Red',
+        value: '#DA2C38',
+        class: 'radio-red'
+
+    },
+
+    {
+        id: 4,
+        title: 'Yellow',
+        value: '#E6AF2E',
+        class: 'radio-yellow'
+
+    },
+
+
+    {
+        id: 5,
+        title: 'Green',
+        value: '#9AE19D',
+        class: 'radio-green'
+
+    }
+
+
+
+    ];
+
+
+        var services = {
+      settings: $settings.getCaption()
     };
 
+    $q.all(services).then(function (services) {
+      $scope.settings = services.settings;
+    });
+
+
+
+
+
+        $scope.updateCaptions = function () {
+                $settings.editCaption($scope.settings);
+
+    };
 
 
 

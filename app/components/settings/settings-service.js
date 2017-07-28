@@ -21,7 +21,8 @@ define([
   var captionSettings = {
     backgroundColor: 'rgba(0,0,0,0.3)',
     textColor: '#FFF',
-    textFont: 'Arial'
+    textFont: 'Arial',
+    textSize: '16'
 
   }
 

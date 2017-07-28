@@ -429,9 +429,10 @@ md-backdrop.md-dialog-backdrop {
      z-index: 1032;
 }
 
-md-dialog {
-  max-width: 60%;
-      max-height: 60%;
+
+md-toolbar.md-default-theme:not(.md-menu-toolbar), md-toolbar:not(.md-menu-toolbar) {
+    background-color: #5b72fc;
+    color: rgba(255,255,255,0.87);
 }
 
 .scroll-container {
@@ -461,3 +462,231 @@ md-dialog {
   padding-left: 25px;
   background-color: #fff;
 }
+
+span.subtitle {
+    display: inline-block;
+    width: 100%;
+    text-transform: uppercase;
+    font-weight: 700;
+    color: #5b72fc;
+    text-decoration: underline;
+}
+
+
+md-radio-button {
+    display: inline-block;
+    margin: 18px 0px 25px;    
+}
+
+.sample-sub {
+  padding: 8px 0px;
+  font-weight: 400;
+  display: block;
+  width: 100%;
+  margin-bottom: 10px;
+  text-align: center;
+}
+
+
+md-slider.md-default-theme .md-thumb:after, md-slider .md-thumb:after {
+    border-color: rgb(91, 114, 252);
+    background-color: rgb(91, 114, 252);
+}
+
+md-slider.md-default-theme .md-track.md-track-fill, md-slider .md-track.md-track-fill {
+    background-color: rgb(91, 114, 252);
+}
+
+/*** Radio BUttons ***/
+
+
+md-radio-button .md-on {
+    -webkit-transform: scale(0.8) !important;
+    transform: scale(0.8) !important;
+
+  }
+
+
+
+
+md-radio-button .md-off, md-radio-button .md-on, md-radio-button .md-container {
+  width: 25px;
+  height: 25px;
+}
+
+
+
+md-radio-button.radio-black .md-on {
+    background-color: rgba(0,0,0,0.40);
+
+  }
+
+md-radio-button.radio-black .md-off {
+    border-color: rgba(0,0,0,0.40);
+}
+
+
+  md-radio-button.radio-black.md-checked .md-off {
+    border-color: rgba(0,0,0,0.90);
+}
+
+
+  md-radio-button.radio-black.md-checked .md-on {
+        background-color: rgba(0,0,0,0.90);
+
+  }
+
+md-radio-button.radio-black {
+   color: rgba(0,0,0,0.90) !important;
+}
+
+
+
+md-radio-button.radio-white .md-on {
+    background-color: white;
+
+  }
+
+md-radio-button.radio-white .md-off {
+    border-color: rgba(0,0,0,0.10);
+}
+
+
+  md-radio-button.radio-white.md-checked .md-off {
+    border-color: rgba(0,0,0,0.90);
+}
+
+
+  md-radio-button.radio-white.md-checked .md-on {
+        background-color: white;
+
+  }
+
+md-radio-button.radio-white {
+   color: rgba(0,0,0,0.90) !important;
+}
+
+
+
+
+
+md-radio-button.radio-blue .md-off {
+    border-color: rgba(40,146,215,0.40);
+}
+
+
+md-radio-button.radio-blue .md-on {
+        background-color: rgba(40,146,215,0.40);
+
+  }
+
+  md-radio-button.radio-blue.md-checked .md-off {
+    border-color: rgba(40,146,215,0.90);
+}
+
+
+  md-radio-button.radio-blue.md-checked .md-on {
+        background-color: rgba(40,146,215,0.90);
+
+  }
+
+  md-radio-button.radio-blue{
+   color: rgba(40,146,215,0.90) !important;
+}
+
+
+
+
+md-radio-button.radio-red .md-off {
+    border-color: #DA2C38;
+    opacity: 0.4;
+}
+
+
+md-radio-button.radio-red .md-on {
+        background-color: #DA2C38;
+    opacity: 0.4;
+  }
+
+  md-radio-button.radio-red.md-checked .md-off {
+    border-color: #DA2C38;
+    opacity: 0.9;
+}
+
+
+  md-radio-button.radio-red.md-checked .md-on {
+        background-color: #DA2C38;
+    opacity: 0.9;
+
+  }
+
+
+md-radio-button.radio-red  {
+     color: #DA2C38 !important;
+}
+
+
+
+
+
+
+md-radio-button.radio-green .md-off {
+    border-color: #9AE19D;
+    opacity: 0.4;
+}
+
+
+md-radio-button.radio-green .md-on {
+        background-color: #9AE19D;
+    opacity: 0.4;
+
+  }
+
+  md-radio-button.radio-green.md-checked .md-off {
+    border-color: #9AE19D;
+    opacity: 0.9;
+}
+
+
+  md-radio-button.radio-green.md-checked .md-on {
+        background-color: #9AE19D;
+    opacity: 0.9;
+  }
+
+md-radio-button.radio-green {
+   color: #9AE19D !important;
+}
+
+
+
+
+md-radio-button.radio-yellow .md-off {
+    border-color: #E6AF2E;
+    opacity: 0.4;
+}
+
+
+md-radio-button.radio-yellow .md-on {
+        background-color: #E6AF2E;
+    opacity: 0.4;
+
+  }
+
+  md-radio-button.radio-yellow.md-checked .md-off {
+    border-color: #E6AF2E;
+    opacity: 0.9;
+}
+
+
+  md-radio-button.radio-yellow.md-checked .md-on {
+        background-color: #E6AF2E;
+    opacity: 0.9;
+  }
+
+
+  md-radio-button.radio-yellow {
+   color: #E6AF2E !important;
+}
+
+
+

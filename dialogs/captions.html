@@ -1,7 +1,7 @@
 <md-dialog aria-label="Caption Settings">
     <md-toolbar>
       <div class="md-toolbar-tools">
-        <h2>Mango (Fruit)</h2>
+        <h2>Customize Your Subs</h2>
         <span flex></span>
         <md-button class="md-icon-button" ng-click="closeDialog()" aria-label="Cancel">
          <i class="fa fa-times" aria-hidden="true"></i>
@@ -12,24 +12,46 @@
     <md-dialog-content>
       <div class="md-dialog-content">
         
+                <span class="subtitle">Text Size</span>
 
-<span class="radioValue">{{ selectedId }}</span>
+                    <md-slider-container>
 
-        <h4>Subtitle Background Color</h4>
 
-                <md-radio-group ng-model="selectedId">
-      <md-radio-button ng-repeat="it in avatarData"
+                 <md-slider flex min="16" max="40" ng-model="settings.textSize" aria-label="red" id="red-slider"  ng-change="updateCaptions()">
+      </md-slider>
+      <md-input-container>
+        <input flex type="number" ng-model="settings.textSize" aria-label="blue" aria-controls="blue-slider">
+      </md-input-container>
+
+</md-slider-container>
+ 
+
+
+        <span class="subtitle">Text Color</span>
+
+                <md-radio-group ng-model="settings.textColor" ng-change="updateCaptions()">
+      <md-radio-button ng-repeat="it in colorData"
                        ng-value="it.value"
                        aria-label="{{it.title}}"
-                       ng-model="settings.backgroundColor">
-          <md-icon></md-icon>
+                       ng-model="settings.textColor"
+                        class="{{it.class}}">
       </md-radio-button>
     </md-radio-group>
 
 
-        <p>
-          The mango is a juicy stone fruit belonging to the genus Mangifera, consisting of numerous tropical fruiting trees, cultivated mostly for edible fruit. The majority of these species are found in nature as wild mangoes. They all belong to the flowering plant family Anacardiaceae. The mango is native to South and Southeast Asia, from where it has been distributed worldwide to become one of the most cultivated fruits in the tropics.
-        </p>
+        <span class="subtitle">Background Color</span>
+
+
+        <md-radio-group ng-model="settings.backgroundColor" ng-change="updateCaptions()">
+      <md-radio-button ng-repeat="it in avatarData"
+                       ng-value="it.value"
+                       aria-label="{{it.title}}"
+                       ng-model="settings.backgroundColor"
+                        class="{{it.class}}">
+      </md-radio-button>
+    </md-radio-group>
+
+    <span class="sample-sub" style="background: {{settings.backgroundColor}}; color: {{settings.textColor}}; font-size: {{settings.textSize}}px;">Sample Subtitle</span>
 
    
       </div>
