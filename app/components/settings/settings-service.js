@@ -22,7 +22,7 @@ define([
     backgroundColor: 'rgba(0,0,0,0.3)',
     textColor: '#FFF',
     textFont: 'Arial',
-    textSize: '16'
+    textSize: 16
 
   }
 

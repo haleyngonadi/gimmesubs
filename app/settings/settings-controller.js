@@ -44,6 +44,24 @@ define(function () {
             };
 
 
+ $scope.sizes = [
+          "Arial",
+          "Montserrat",
+          "Oswald",
+          "Arvo",
+          "Playfair Display",
+          "Sacramento"
+
+      ];
+
+
+$scope.textfonts = [
+          "Arial",
+          "medium (14-inch)",
+          "large (16-inch)",
+          "insane (42-inch)"
+      ];
+
 
                 $scope.avatarData = [{
                   id: 1,

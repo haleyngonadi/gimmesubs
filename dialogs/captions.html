@@ -24,6 +24,17 @@
       </md-input-container>
 
 </md-slider-container>
+
+
+                <span class="subtitle"> {{textfont}}</span>
+
+
+ <md-input-container style="margin-right: 10px;">
+        <label>Size</label>
+        <md-select ng-model="settings.textFont"  ng-change="updateCaptions()">
+          <md-option ng-repeat="size in sizes" value="{{size}}">{{size}}</md-option>
+        </md-select>
+      </md-input-container>
  
 
 
@@ -51,7 +62,7 @@
       </md-radio-button>
     </md-radio-group>
 
-    <span class="sample-sub" style="background: {{settings.backgroundColor}}; color: {{settings.textColor}}; font-size: {{settings.textSize}}px;">Sample Subtitle</span>
+    <span class="sample-sub" style="background: {{settings.backgroundColor}}; color: {{settings.textColor}}; font-size: {{settings.textSize}}px; font-family:'{{settings.textFont}}', Arial, sans;">Sample Subtitle</span>
 
    
       </div>
