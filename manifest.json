@@ -1,7 +1,7 @@
 {
   "name": "GimmeSubs",
   "version": "1.1",
-  "description": "GimmeSubs is the ultimate resource of English Subtitles for international shows and movies. ",
+  "description": "GimmeSubs anchors all your favorite international series, telenovelas, and movies with English subtitles. ",
   "permissions": [
     "browsingData", "activeTab", "notifications", "storage","http://*/*", "https://*/*", "webNavigation",  "*://*/*"
   ],
