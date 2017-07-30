@@ -19,6 +19,7 @@ var ReadAlong = {
         this.generateWordList();
         this.addEventListeners();
         this.selectCurrentWord();
+
     },
 
     /**
@@ -50,6 +51,10 @@ var ReadAlong = {
         var len;
         var is_current_word;
         var word = null;
+
+
+
+
         for (i = 0, len = this.words.length; i < len; i += 1) {
             is_current_word = (
                 (
@@ -80,29 +85,21 @@ var ReadAlong = {
      */
     selectCurrentWord: function() {
         var that = this;
+
+
         var current_word = this.getCurrentWord();
+
         var is_playing = !this.audio_element.paused;
 
         if (!current_word.element.classList.contains('speaking')) {
             this.removeWordSelection();
+
             current_word.element.classList.add('speaking');
             if (this.autofocus_current_word) {
 
 
                 current_word.element.focus();
 
-
-
-            //     var whatsplaying = document.querySelector('#passage-audio');
-            //                     console.log(this.audio_element.style);
-
-
-            // var num = parseFloat(whatsplaying);
-            // var val = num - (num * .25);
-            // current_word.element.style.width= val+"px";
-            //                 console.log(current_word);
-
-            
 
 
 
@@ -163,6 +160,8 @@ var ReadAlong = {
 
     addEventListeners: function () {
         var that = this;
+
+
 
         /**
          * Select next word (at that.audio_element.currentTime) when playing begins

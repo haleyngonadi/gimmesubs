@@ -11,6 +11,8 @@ var require = {
     'lodash': '../bower_components/lodash/lodash',
     'moment': '../bower_components/moment/moment',
     'dirPagination': '../bower_components/dirPagination',
+    'ng-notifications-bar': '../bower_components/ng-notifications-bar/dist/ngNotificationsBar.min',
+
     // 'qTip': '../assets/js/jquery.qtip.min',
     // 'jquery': '../bower_components/jquery/jquery.min',
 
@@ -28,6 +30,7 @@ var require = {
     'angular-moment': ['angular', 'moment'],
     'dirPagination': ['angular'],
     'angular-material': ['angular', 'angular-aria', 'angular-animate'],
+    'ng-notifications-bar': ['angular','angular-sanitize']
 
     // 'qTip': ['jquery']
 

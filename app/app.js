@@ -5,7 +5,7 @@ define([
   'angular-moment',
     'angular-animate',
         'angular-aria',
-
+        'ng-notifications-bar',
     'angular-material',
   //'dirPagination/dirPagination',
   'components/constants/constants',
@@ -34,6 +34,7 @@ define([
     'ngSanitize',
     'ngAnimate',
     'ngAria',
+    'ngNotificationsBar',
     'ngMaterial',
     'angularMoment',
     'app.constants',

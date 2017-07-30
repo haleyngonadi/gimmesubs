@@ -55,12 +55,7 @@ define(function () {
       ];
 
 
-$scope.textfonts = [
-          "Arial",
-          "medium (14-inch)",
-          "large (16-inch)",
-          "insane (42-inch)"
-      ];
+
 
 
                 $scope.avatarData = [{
