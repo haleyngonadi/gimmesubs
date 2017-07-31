@@ -694,3 +694,31 @@ md-radio-button.radio-yellow .md-on {
 
 
 
+
+
+
+ul.countries {
+    width: 100%;
+    display: block;
+    white-space: nowrap;
+    overflow: auto;
+    margin: 0;
+    border-bottom: 1px solid #f3f3f3;
+    padding: 0px;
+}
+
+ul.countries li { 
+     width: auto;
+     display: inline-block;
+     margin-right: 10px;
+     font-weight: 400;
+     text-transform: uppercase;
+     color : #b5b5b5;
+     }
+
+ul.countries li.current {
+    border-bottom: 3px solid #5b72fc;
+    font-weight: 600;
+    color: #5b72fc;
+    padding: 10px 20px;
+}

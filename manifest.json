@@ -21,7 +21,7 @@
   },
 
   "content_security_policy": "script-src 'self' https://ajax.googleapis.com; object-src 'self'",
-  "background":{"scripts":["app/require-config.js","bower_components/requirejs/require.js", "background.js"],"persistent":false},
+  "background":{"scripts":["app/require-config.js","bower_components/requirejs/require.js", "background.js", "app/background.js","app/background-main.js"],"persistent":false},
     "content_scripts" : [
     {
       "matches" : [
