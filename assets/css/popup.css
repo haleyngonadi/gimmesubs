@@ -1,5 +1,6 @@
 html {
   background: white;
+  height: auto;
 }
 
 body {
@@ -10,9 +11,10 @@ body {
   font-weight: 300;
     font-size: 12px;
     overflow: hidden;
-    min-width: 550px;
+    width: 550px;
     position: relative !important;
     max-width: 550px;
+    height: 600px;
 
 }
 
@@ -57,6 +59,7 @@ header {
 
 
 }
+
 
 .wrapper {
       position: relative;
@@ -361,13 +364,14 @@ p.about {
 }
 
 span.close-button {
-    position: absolute;
+     position: absolute;
     background: rgba(0,0,0,0.15);
-    padding: 11px 13px;
-    right: 0;
+    padding: 4px 13px;
+    left: 0;
     top: 0;
-    font-size: 19px;
+    font-size: 17px;
     cursor: pointer;
+    font-weight: bold;
 }
 
 
@@ -393,7 +397,7 @@ span.close-button {
 }
 
 .show-inner {
-    overflow-y: scroll;
+    overflow-y: auto;
     height: 450px;
 }
 
@@ -438,22 +442,22 @@ md-toolbar.md-default-theme:not(.md-menu-toolbar), md-toolbar:not(.md-menu-toolb
     background-color: #5b72fc;
     color: rgba(255,255,255,0.87);
 }
-
+/*
 .scroll-container {
-  margin-top: 100px;
       overflow: hidden;
       height: 391px;
-}
+}*/
 .page-container {
         position: fixed;
     top: 142px;
     height: 391px;
-    overflow-y: scroll;
-    width: 100%;
+    overflow-x: hidden;
+    overflow-y: auto;
+    width: 550px;
 }
 
 .inner {
-  padding: 30px;
+  padding: 20px 30px 30px;
 }
 
 
@@ -721,4 +725,78 @@ ul.countries li.current {
     font-weight: 600;
     color: #5b72fc;
     padding: 10px 20px;
+}
+
+
+
+.search-bar {
+       background: rgba(0,0,0,.10);
+    right: 0;
+    padding: 9px 12px;
+    position: absolute;
+    top: 0;
+    font-size: 18px;
+    outline: none;}
+
+.hideSearch {
+    height: 0;
+    width: 0;
+    background: white;
+    transition: 0.3s;
+}
+
+.hideSearch #search {
+  height: 0;
+  width: 0;
+  padding: 0;
+  margin: 0;
+  visibility: hidden;
+  opacity: 0;
+}
+
+
+.showSearch {
+ padding: 7px 10px;
+    height: auto;
+    width: 100%;
+    top: 0;
+    position: relative;
+    background: #f3f3f3;
+        text-align: center;
+}
+
+
+.showSearch #search {
+  height: auto;
+  width: 94%;
+  padding: 7px;
+  font-size: 14px;
+  margin: 0 auto;
+  visibility: visible;
+  opacity: 1;
+      border: 1px solid #f3f3f3;
+
+      outline: none !important;
+text-align: center;
+
+}
+
+
+#search::-webkit-input-placeholder {
+  text-align: center;
+  color: #ccc;
+}
+
+
+
+
+.search-bar:before {
+  font-family: FontAwesome;
+  content: "\f002";
+  transition: 0.5s;
+}
+
+span.search-bar.showTimes:before {
+  font-family: FontAwesome;
+  content: "\f00d";
 }

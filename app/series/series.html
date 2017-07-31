@@ -1,18 +1,14 @@
-<header>All Series</header>
+<header>Shows
+<span class="search-bar" ng-click="sortSeries()" ng-class="{'showTimes': isActive}"></i></span>
+</header>
 
 <div id="series" class="page-container">
-
-
-<ul class="countries menulist">
-    <li ng-repeat="item in shows" ng-class="{'current': item == shows[0]}" ng-click="sortCountry()">{{ item.country }}</li>
-</ul>
-
-
+<div class="hideSearch" ng-class="{'showSearch slideInDown animated': isActive}"><input type="search" ng-model="query" id="search" ng-model="search" placeholder="Filter shows by name or country" ng-class="{'bounceIn animated': isActive}"></div>
 
 
 <div class="inner">
   	<div class="row">
- <div class="col-xs-4 series-image" ng-repeat="show in shows track by $index">
+ <div class="col-xs-4 series-image" ng-repeat="show in shows | filter:query | orderBy: 'name'">
 
 <div class="card">
 

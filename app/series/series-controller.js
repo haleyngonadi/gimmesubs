@@ -53,36 +53,18 @@ define(function () {
 
     };
 
+  $scope.isActive = false;
+
 
     $scope.updateSubscriptions = function () {
       $series.setFeeds($scope.shows);
     };
 
 
-    $scope.sortCountry = function () {
+    $scope.sortSeries = function () {
 
-    //     $('.menulist li.current').removeClass('current');
-    // $(this).parent().addClass('current');
-    
-    // // setup heading
-    // $('h1.gheading').text($(this).text());
-    // //filter gallery
-    // var category = $(this).text().toLowerCase().replace(' ','-');
-    // console.log(category)
-    // //Remove hidden class if 'all-projects' is selected
-    // if(category == 'all'){
-    //   $('ul#gallery li:hidden').fadeIn(500, 'linear').removeClass('hidden');
-    // }else{
-    //   $('ul#gallery li').each(function(){
-    //     if(!$(this).hasClass(category)){
-    //       $(this).hide().addClass('hidden');
-    //     }else{
-    //       $(this).fadeIn(500, 'linear').removeClass('hidden');
-    //     }
-    //   });
-    // }
-    // // stop link behaviour
-    // return false
+      $scope.isActive = !$scope.isActive;
+      //$('.search-bar').addClass('showSearch');
 
     };
 
