@@ -31,7 +31,6 @@ define(function () {
 
 
   $scope.showListBottomSheet = function() {
-    console.log('Test');
     $mdBottomSheet.show({
       templateUrl: 'dialogs/bottom-sheet-list-template.html',
       controller: function ListBottomSheetCtrl($scope, $mdBottomSheet, $mdToast) {
@@ -53,6 +52,7 @@ define(function () {
     }).then(function(clickedItem) {
             $scope.settings.subLang = clickedItem['name'];
              $settings.addSetting($scope.settings);
+
 
 
     }).catch(function(error) {

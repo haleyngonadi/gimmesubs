@@ -15,10 +15,10 @@
 <div class="card-image" style="background-image: url({{show.image}})"></div>
 
  <div class="view-button">
-                         <div class="col-xs-4" id="action" data-country="{{show.country}}">
+                         <div class="col-xs-6" id="action" data-country="{{show.country}}">
                          <span class="qtip expand" data-title="Add show to favorites"><input ng-model="show.subscribed" ng-change="updateSubscriptions()" class="star" type="checkbox"></span></div>
-                        <div class="col-xs-4" id="action"><span class="qtip expand" data-title="View Episodes"><a ng-click="viewShow(show)" class="somebutton"><i class="fa fa-list" aria-hidden="true"></i></a></span></div>
-                        <div ng-click="shareShow()" class="col-xs-4" id="action"><span class="qtip expand" data-title="Share {{show.name}}"><i class="fa fa-share-alt" aria-hidden="true"></i></span></div>
+                        <div class="col-xs-6" id="action"><span class="qtip expand" data-title="View Episodes"><a ng-click="viewShow(show)" class="somebutton"><i class="fa fa-list" aria-hidden="true"></i></a></span></div>
+                    
 
 
                     </div>
