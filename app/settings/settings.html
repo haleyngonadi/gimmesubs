@@ -24,18 +24,19 @@
       </li>
 
       <li>
-        <label class="control checkbox">
+        <label class="control checkbox control--checkbox">
           <input type="checkbox" ng-model="settings.inlineImages" ng-change="updateSettings()">
-          <span class="control-indicator"></span>
+          <div class="control__indicator"></div>
           Show article images
         </label>
       </li>
 
       <li>
-        <label class="control checkbox">
+        <label class="control checkbox control--checkbox">
+         Open links in the background
           <input type="checkbox" ng-model="settings.openLinksInBackground" ng-change="updateSettings()">
-          <span class="control-indicator"></span>
-          Open links in the background
+            <div class="control__indicator"></div>
+         
         </label>
       </li>
     </ul>
