@@ -1,7 +1,7 @@
 define(function () {
   'use strict';
 
-  var SettingsController = function ($q, $scope, $settings, $mdDialog) {
+  var SettingsController = function ($q, $scope, $settings, $mdDialog, $mdBottomSheet, $mdToast) {
 
      $settings.getFeedsFromExtension();
 
@@ -25,8 +25,42 @@ define(function () {
     }
 
     $scope.updateSettings = function () {
+      console.log('Settings saved');
       $settings.addSetting($scope.settings);
     };
+
+
+  $scope.showListBottomSheet = function() {
+    console.log('Test');
+    $mdBottomSheet.show({
+      templateUrl: 'dialogs/bottom-sheet-list-template.html',
+      controller: function ListBottomSheetCtrl($scope, $mdBottomSheet, $mdToast) {
+
+          $scope.items = [
+    { name: 'Share'},
+    { name: 'Upload'},
+    { name: 'Copy' },
+    { name: 'Print this page'},
+  ];
+
+  $scope.listItemClick = function($index) {
+    var clickedItem = $scope.items[$index];
+    $mdBottomSheet.hide(clickedItem);
+
+  };
+
+      }
+    }).then(function(clickedItem) {
+            $scope.settings.subLang = clickedItem['name'];
+             $settings.addSetting($scope.settings);
+
+
+    }).catch(function(error) {
+      // User clicked outside or hit escape
+    });
+  };
+
+
 
        $scope.changeCaptions = function(ev) {
              $mdDialog.show({
@@ -200,6 +234,8 @@ define(function () {
     '$scope',
     '$settings',
     '$mdDialog', 
+    '$mdBottomSheet',
+    '$mdToast',
     SettingsController
   ];
 });

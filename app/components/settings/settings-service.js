@@ -15,7 +15,8 @@ define([
     badgeIcon: true,
     badgeStyle: 'dot',
     desktopNotifications: true,
-    showWelcomeModal: true
+    showWelcomeModal: true,
+    subLang: 'en'
   };
 
   var captionSettings = {

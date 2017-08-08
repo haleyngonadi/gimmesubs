@@ -16,11 +16,11 @@
 
 
       <li>
-        <label class="control checkbox">
-          <input type="checkbox" ng-model="settings.articleSnippets" ng-change="updateSettings()">
-          <span class="control-indicator"></span>
-          Show article snippets
-        </label>
+       <label class="control checkbox">
+         <span ng-click="showListBottomSheet()">Subtitle Language</span> 
+         <input type="hidden" ng-model="settings.subLang" ng-change="updateSettings()">
+         <i ng-bind="settings.subLang"></i> 
+         </label>
       </li>
 
       <li>
